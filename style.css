@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #202529;
+    width: 100vw;
+    height: 100vh;
+}
+
+p{
+    color: white;
+    font-size: 20px;
+    /* background-color: aqua; */
+    width: 500px;
+    height: 100%;
+    word-wrap: break-word;
+}
+
+
+.textAreaInput{
+    padding: 10px;
+    border-radius: 20px;
+    width: 500px;
+    height: 130px;
+    outline: none;
+    border: none;
+    resize: none;
+    background-color: #32383D;
+    color: white;
+    font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.700) 0 0 10px;
+}
+
+.textAreaInput::placeholder{
+    color: rgba(255, 255, 255, 0.400);
+}
+
+.inputsDiv{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.botaoAdc{
+    width: 500px;
+    padding: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    background-color: #1BC6B4;
+    color: white;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+
+.botaoAdc:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.toDoDivExt{
+    margin-top: 20px;
+    width: 100vw;
+    height: fit-content;
+    /* background-color: #1BC6B4; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toDoDivInt{
+    /* background-color: aliceblue; */
+    width: 700px;
+    height: fit-content;
+    display: grid;
+
+}
+
+.toDoAdicionados{
+    justify-self: center;
+    width: 95%;
+    padding: 10px;
+    height: 150px;
+    border-radius: 20px;
+    margin: 10px 0 10px 0;
+    background-color: #32383D;
+    display: flex;
+}
