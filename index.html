@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
-
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="style.css">
+        
     <title>Document</title>
 </head>
 <body>
@@ -14,16 +14,19 @@
 
 
         <div class="inputsDiv">
-            <textarea placeholder="Insira Seu objetivo aqui!" class="textAreaInput" name="" id="" cols="30" rows="10"></textarea>
-            <button class="botaoAdc">Adicionar</button>
+            <textarea id="valorTextArea" placeholder="Insira Seu objetivo aqui!" class="textAreaInput" name="" id="" cols="30" rows="10"></textarea>
+            <button id="botaoAdcicionar" class="botaoAdc">Adicionar</button>
         </div>
 
-        <div class="toDoDivExt">
-            <div class="toDoDivInt">
-                <div class="toDoAdicionados">
-                        <p>testaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaetestaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaetestaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaae</p>
-                        <button>Remover</button>
-                </div>
+        <div id="armazenaDiv" class="toDoDivExt">
+            <div id="divInterna" class="toDoDivInt">
+                <!-- <div id="adicionadosToDoDiv" class="toDoAdicionados">
+                        <p></p>
+                        <div id='botoes' class="botoesAdicionadosDiv">
+                            <button class="botaoAdicionado">Remover</button>
+                            <button class="botaoAdicionado">Feito</button>
+                        </div>
+                    </div> -->
             </div>
         </div>
 
@@ -31,5 +34,7 @@
     
 
 </body>
+<script src="script.js"></script>
+
 
 </html>
