@@ -11,48 +11,57 @@ botaoAdicionar.addEventListener('click', adicionar);
 
 function adicionar(){
 
-    // var divAdicionadosTodo = document.createElement('div');
-    // divAdicionadosTodo.className = 'toDoAdicionados';
-    // divInterna.appendChild(divAdicionadosTodo);
+    var divAdicionadosTodo = document.createElement('div');
+    divAdicionadosTodo.className = 'toDoAdicionados';
+    divInterna.appendChild(divAdicionadosTodo);
 
-    // var textoToDo = document.createElement('p');
-    // textoToDo.textContent = fazeres.value;
-    // divAdicionadosTodo.appendChild(textoToDo);
+    var textoToDo = document.createElement('p');
+    textoToDo.textContent = fazeres.value;
+    divAdicionadosTodo.appendChild(textoToDo);
 
-    // var divBotoes = document.createElement('div');
-    // divBotoes.className = 'botoesAdicionadosDiv';
-    // divAdicionadosTodo.appendChild(divBotoes)
+    var divBotoes = document.createElement('div');
+    divBotoes.className = 'botoesAdicionadosDiv';
+    divAdicionadosTodo.appendChild(divBotoes)
 
-    // var botaoFeito = document.createElement('button');
-    // botaoFeito.className = 'botaoAdicionado';
-    // botaoFeito.textContent = 'Remover';
-    // divBotoes.appendChild(botaoFeito)
+    var botaoFeito = document.createElement('button');
+    botaoFeito.className = 'botaoAdicionado';
+    botaoFeito.id = 'botaoRemover';
+    botaoFeito.textContent = 'Remover';
+    divBotoes.appendChild(botaoFeito)
 
-    // var botaoRemover = document.createElement('button');
-    // botaoRemover.className = 'botaoAdicionado';
-    // botaoRemover.id = 'botaoAdicionado2';
-    // botaoRemover.textContent = 'Feito';
-    // divBotoes.appendChild(botaoRemover)
-    teste+=`<div id="adicionadosToDoDiv" class="toDoAdicionados">
-    <p></p>
-    <div id='botoes' class="botoesAdicionadosDiv">
-    <button id='teste' class="botaoAdicionado">Remover</button>
-    <button class="botaoAdicionado">Feito</button>
-    </div>
-    </div> `
+    var botaoRemover = document.createElement('button');
+    botaoRemover.className = 'botaoAdicionado';
+    botaoRemover.id = 'botaoFeito';
+    botaoRemover.textContent = 'Feito';
+    divBotoes.appendChild(botaoRemover)
     
-    divInterna.innerHTML=teste;
 
 }
 
-window.onclick = function(){
-    verificar;
-}
+divInterna.addEventListener('click', function(event){
+    
+    var clicado = event.target;
+    
+    // console.log(clicado)
+    if(clicado.id == 'botaoRemover'){
+        var botaoRemover = document.querySelectorAll('#botaoRemover')
+        botaoRemover.forEach(function(e){
+            e.addEventListener('click', function(){
+                e.parentNode.parentNode.remove();
+            })
+        })
+    }
 
-function verificar(){
-    var botoesRemoverArray = document.getElementById('teste');
-}
-
-botoesRemoverArray.addEventListener('click', function(){
-    alert('teste')
-})
+    else if (clicado.id == 'botaoFeito'){
+        var botaoFeito = document.querySelectorAll('#botaoFeito')
+        botaoFeito.forEach(function(e){
+            e.addEventListener('click', function(){
+                let divExterna = e.parentNode.parentNode;
+                let teste = e.parentNode;
+                teste.children[0].classList = "botaoAdicionado feitoBotoes"
+                divExterna.classList = 'toDoAdicionados feitoDiv';
+                teste.removeChild(this)
+            })
+        })
+    }
+}) 
